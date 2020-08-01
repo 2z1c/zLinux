@@ -1,0 +1,21 @@
+{
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  //-------- Search configuration --------
+  // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.
+  "search.exclude": {
+    "**/.git": true,
+  },
+  //-------- Files configuration --------
+  // Configure glob patterns for excluding files and folders.
+  //    "files.exclude": {
+  "files.watcherExclude": {
+    "**/.git": true,
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "build": true,
+    "tmp": true,
+    "**/CMakeFiles": true,
+    "**/CMakeCache.txt": true,
+  },
+}

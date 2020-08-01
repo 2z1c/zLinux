@@ -6,7 +6,7 @@ include_directories(.)
 
 Set(EXECUTABLE_NAME main.run)
 ADD_EXECUTABLE(${EXECUTABLE_NAME} ${DIR_SRCS}) # 生成可执行文件,个人原因，喜欢在编译的可执行文件后面加上后缀
-target_link_libraries(${EXECUTABLE_NAME})
+target_link_libraries(${EXECUTABLE_NAME} zApueTest)
 
 # 复制
 # copy out lib EXECUTABLE file...

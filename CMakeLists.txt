@@ -23,10 +23,11 @@ SET(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS ON)
 if(CMAKE_TOOLCHAIN_FILE)
 # CMAKE_TOOLCHAIN_FILE 被指定了，就不用再指定了
 else()
-# CMAKE_TOOLCHAIN_FILE 没有被指定，加载默认的脚本
-SET(CMAKE_TOOLCHAIN_FILE ${Project_Root_DIR}/QemuArmv7ToolChain.cmake)
-endif()
+# 将可执行文件复制到一个特定的地方
+# SET(EXECUTABLE_Distribution_DIR ${Project_Build_DIR}/bin)
+message(FATAL_ERROR "需要执行交叉编译的 CMAKE_TOOLCHAIN_FILE 文件")
 
+endif()
 
 # 添加生成动态库的工程路径
 # ADD_SUBDIRECTORY(libsrc)
@@ -36,9 +37,11 @@ endif()
 # 设置好动态库发布的路径
 set(Lib_Distribution_DIR ${CMAKE_FIND_ROOT_PATH}/lib)
 # 设置好头文件的路径
-set(Lib_IncludeDistribution_DIR  ${CMAKE_FIND_ROOT_PATH}/include)
-# 设置可执行文件的发布路径
-# 
+set(Lib_IncludeDistribution_DIR  ${CMAKE_FIND_ROOT_PATH}/include/zLinux)
+
+# 添加头文件查找路径
+INCLUDE_DIRECTORIES(${Lib_IncludeDistribution_DIR})
+# 可执行文件的发布路径
 message(STATUS "可执行文件发布路径定义在toolchain脚本中" ${EXECUTABLE_Distribution_DIR})
 # 添加外部的一些源文件路径
 set(Apue_Srcs_DIR  ${Project_Root_DIR}/ApueSrc)
@@ -65,10 +68,11 @@ file(MAKE_DIRECTORY ${Project_Build_DIR})
 # ---------------------------
 
 # 1. 首先依赖库
-# ADD_SUBDIRECTORY(${Project_Root_DIR}/libsrc ${Project_Build_DIR}/libsrc)
+ADD_SUBDIRECTORY(${Project_Root_DIR}/libsrc ${Project_Build_DIR}/libsrc)
 
 # 2. 添加需要的编译的项目
 ADD_SUBDIRECTORY(${Project_Root_DIR}/temp ${Project_Build_DIR}/temp) 
+
 
 
 

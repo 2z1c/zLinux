@@ -18,6 +18,3 @@ add_custom_command(TARGET ${EXECUTABLE_NAME} POST_BUILD
         #                   COMMAND "${CMAKE_COMMAND}" -E
         #                   remove_directory "${CMAKE_CURRENT_BINARY_DIR}"
         COMMENT "Copying ${PROJECT_NAME} to output directory")
-
-
-message(STATUS ${CMAKE_CURRENT_BINARY_DIR})

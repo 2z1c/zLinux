@@ -16,6 +16,6 @@ SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 # 可执行文件的发布路径
 SET(EXECUTABLE_Distribution_DIR ${CMAKE_FIND_ROOT_PATH}/../share_file)
 # https://stackoverflow.com/questions/24648357/compiling-a-static-executable-with-cmake
-SET(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
-SET(BUILD_SHARED_LIBS OFF)
-SET(CMAKE_EXE_LINKER_FLAGS "-static")
+# SET(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+# SET(BUILD_SHARED_LIBS OFF)
+# SET(CMAKE_EXE_LINKER_FLAGS "-static")

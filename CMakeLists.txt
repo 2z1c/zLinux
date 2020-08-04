@@ -7,7 +7,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.10.2) # 指定最小的版本
 # ---------------------------
 set(Project_Root_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 # 设置好编译路径
-set(Project_Build_DIR ${Project_Root_DIR}/tmp)
+set(Project_Build_DIR ${CMAKE_BINARY_DIR}/tmp)
 
 # 使用 if else 
 SET(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS ON)

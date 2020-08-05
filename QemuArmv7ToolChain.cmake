@@ -19,3 +19,7 @@ SET(EXECUTABLE_Distribution_DIR ${CMAKE_FIND_ROOT_PATH}/../share_file)
 # SET(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 # SET(BUILD_SHARED_LIBS OFF)
 # SET(CMAKE_EXE_LINKER_FLAGS "-static")
+# 设置好动态库发布的路径
+set(Lib_Distribution_DIR ${CMAKE_FIND_ROOT_PATH}/lib)
+# 设置好头文件的路径
+set(Lib_IncludeDistribution_DIR  ${CMAKE_FIND_ROOT_PATH}/include/zLinux)

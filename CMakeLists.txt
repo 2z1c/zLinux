@@ -23,13 +23,7 @@ SET(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS ON)
 if(CMAKE_TOOLCHAIN_FILE)
 # CMAKE_TOOLCHAIN_FILE 被指定了，就不用再指定了
 else()
-# 将可执行文件复制到一个特定的地方
-# message(FATAL_ERROR "需要执行交叉编译的 CMAKE_TOOLCHAIN_FILE 文件")
-SET(EXECUTABLE_Distribution_DIR ${Project_Build_DIR}/bin)
-# 设置好动态库发布的路径
-set(Lib_Distribution_DIR ${CMAKE_BINARY_DIR}/lib)
-# 设置好头文件的路径
-set(Lib_IncludeDistribution_DIR  ${CMAKE_BINARY_DIR}/include)
+include(${CMAKE_CURRENT_SOURCE_DIR}/LocalHostConfig.cmake)
 endif()
 
 # 添加生成动态库的工程路径

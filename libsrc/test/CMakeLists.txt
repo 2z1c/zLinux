@@ -34,7 +34,7 @@ FOREACH(__DIR_Headers ${DIR_Headers})
         COMMAND "${CMAKE_COMMAND}" -E
         copy "${CMAKE_CURRENT_SOURCE_DIR}/${__DIR_Headers}"
         "${Lib_IncludeDistribution_DIR}/${__DIR_Headers}"
-        COMMENT "Copying ${LIB_STATIC_NAME} header to ${Lib_Distribution_DIR} directory")
+        COMMENT "Copying ${LIB_STATIC_NAME} header to ${Lib_IncludeDistribution_DIR} directory")
 ENDFOREACH(__DIR_Headers)
 
 # file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/${DIR_Headers} DESTINATION ${Lib_IncludeDistribution_DIR}/)

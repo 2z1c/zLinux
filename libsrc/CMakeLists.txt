@@ -9,6 +9,7 @@ set(lib_src_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
 ADD_SUBDIRECTORY(test) # 添加子项目文件
 ADD_SUBDIRECTORY(zMemcpy) # 添加子项目文件
+ADD_SUBDIRECTORY(lw_oopc) # 添加子项目文件
 
 
 

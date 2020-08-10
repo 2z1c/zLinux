@@ -1,14 +1,14 @@
-PROJECT(zApueLibtest) # 指定工程名称
+PROJECT(zApueLibMemcpy) # 指定工程名称
 # 指定源文件
 AUX_SOURCE_DIRECTORY(. DIR_SRCS) # 同步当前文件夹的所有文件到 DIR_SRCS 变量
 
 # 添加头文件
-SET(DIR_Headers test.h)
+SET(DIR_Headers zMemcpy.h)
 
 include_directories(.)
 
 # 生成静态库
-Set(LIB_STATIC_NAME zApueTest)
+Set(LIB_STATIC_NAME zMemcpy)
 Set(__LIB_STATIC_NAME lib${LIB_STATIC_NAME}.a)
 
 

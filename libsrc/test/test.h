@@ -1,4 +1,5 @@
 #ifndef __TEST__H
+#define __TEST__H
 #ifdef __cplusplus
 extern "C"{
 #endif

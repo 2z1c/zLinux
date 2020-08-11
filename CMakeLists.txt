@@ -67,6 +67,7 @@ ADD_SUBDIRECTORY(${Project_Root_DIR}/libsrc ${Project_Build_DIR}/libsrc)
 # 2. 添加需要的编译的项目
 ADD_SUBDIRECTORY(${Project_Root_DIR}/temp ${Project_Build_DIR}/temp) 
 ADD_SUBDIRECTORY(${Project_Root_DIR}/zCpp ${Project_Build_DIR}/zCpp) 
+ADD_SUBDIRECTORY(${Project_Root_DIR}/zDemo ${Project_Build_DIR}/zDemo) 
 
 
 

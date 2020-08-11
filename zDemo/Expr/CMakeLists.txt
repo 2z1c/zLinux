@@ -1,4 +1,4 @@
-PROJECT(zDemoAnimal) # 指定工程名称
+PROJECT(zDemoExpr) # 指定工程名称
 CMAKE_MINIMUM_REQUIRED(VERSION 3.10.2) # 指定最小的版本
 FILE (GLOB ALL_SOURCES "*.cpp" "*.c" "./AFolder/*.cpp" )
 FILE (GLOB ALL_INCLUDES "*.hpp" "*.h" "./AFolder/*.hpp"  "./AFolder/*.h" )
@@ -8,7 +8,7 @@ SET (ALL_SRCS
 	 ${ALL_INCLUDES}
 )
 
-SET(EXECUTABLE_NAME animal.run)
+SET(EXECUTABLE_NAME Expr.run)
 
 ADD_EXECUTABLE(${EXECUTABLE_NAME} ${ALL_SRCS})
 target_link_libraries(${EXECUTABLE_NAME} pthread lw_oopc)

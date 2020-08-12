@@ -12,7 +12,8 @@ public:
     width = a;
     height = b;
   }
-  int area()
+  //! virtual  声明为虚函数
+  virtual  int area()
   {
     cout << "Parent class area :" << endl;
     return 0;
@@ -49,11 +50,12 @@ int main()
   shape = &rec;
   // 调用矩形的求面积函数 area
   shape->area();
+  rec.area();
 
   // 存储三角形的地址
   shape = &tri;
   // 调用三角形的求面积函数 area
   shape->area();
-
+  tri.area();
   return 0;
 }

@@ -12,12 +12,8 @@ public:
     width = a;
     height = b;
   }
-  //! virtual  声明为虚函数
-  virtual  int area()
-  {
-    cout << "Parent class area :" << endl;
-    return 0;
-  }
+  //! virtual  声明为纯虚函数，需要子类必须声明一个 area 结构
+  virtual int area() = 0;
 };
 class Rectangle : public Shape
 {
@@ -25,8 +21,9 @@ public:
   Rectangle(int a = 0, int b = 0) : Shape(a, b) {}
   int area()
   {
-    cout << "Rectangle class area :" << endl;
-    return (width * height);
+    float ret = (width * height);
+    cout << "Rectangle class area :" <<ret <<endl;
+    return ret;
   }
 };
 class Triangle : public Shape
@@ -35,8 +32,9 @@ public:
   Triangle(int a = 0, int b = 0) : Shape(a, b) {}
   int area()
   {
-    cout << "Triangle class area :" << endl;
-    return (width * height / 2);
+    float ret = (width * height / 2);
+    cout << "Triangle class area :"<< ret << endl;
+    return ret;
   }
 };
 // 程序的主函数
